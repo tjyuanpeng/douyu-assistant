@@ -1,0 +1,105 @@
+*:focus {
+    outline: 0;
+}
+body {
+    margin: 0;
+    width: 400px;
+    font-size: 14px;
+}
+#need-login a {
+    display: block;
+    margin: 0 auto;
+    line-height: 3.5;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.item-empty {
+    color: #a6a6a6;
+    font-size: 1em;
+    line-height: 60px;
+    text-align: center;
+}
+.item a {
+    position: relative;
+    display: block;
+    height: 67px;
+    padding: 10px 5px 10px 10px;
+    text-decoration: none;
+}
+.item a:hover {
+    background-color: #f5f5f5;
+}
+.room-capture {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 120px;
+    height: 67px;
+}
+.room-title {
+    width: 265px;
+    color: #797979;
+    font-size: 1.2em;
+    line-height: 2.5;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.room-info {
+    color: #a6a6a6;
+    font-size: 0.9em;
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cell {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cell:last-child {
+    margin-right: 0;
+}
+.icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    background: url(./head_icon.png) no-repeat;
+}
+.cell-1 {
+    width: 95px;
+}
+.cell-1 .icon {
+    margin: -4px 2px 0 0;
+    background-position: 0 -54px;
+}
+.cell-2 {
+    width: 90px;
+    margin-right: 10px;
+}
+.cell-2 .icon {
+    margin-right: -3px;
+    background-position: 0 -184px;
+}
+.cell-3 {
+    width: 100px;
+}
+.cell-3 .icon {
+    background-position: 0 -208px;
+}
+#update-time {
+    cursor: default;
+    text-align: center;
+    color: #dbdbdb;
+    font-size: 12px;
+}

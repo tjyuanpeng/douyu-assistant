@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "douyu host online notice",
+    "description": "douyu host online notice",
+    "version": "1.0.0",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "notifications",
+        "http://www.douyutv.com/"
+    ],
+    "background": {
+        "scripts": [
+            "zepto.min.js",
+            "background.js"
+        ]
+    },
+    "content_scripts":[{
+        "all_frames": true,
+        "matches": ["http://www.douyutv.com/member/cp/get_follow_list"],
+        "js": [
+            "zepto.min.js",
+            "content_script.js"
+        ]
+    }],
+    "options_page": "options.html",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "douyu host online notice",
+        "default_popup": "popup.html"
+    }
+}
