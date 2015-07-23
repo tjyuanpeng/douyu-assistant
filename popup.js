@@ -43,7 +43,7 @@ if (data) {
         data.room_list.forEach(function(item) {
             str +=  '<li class="item" >' +
                         '<a href="http://www.douyutv.com' + item.url + '" >' +
-                            '<img class="room-capture" alt="' + item.room_name + '" src="' + item.room_src + '" >' +
+                            '<img class="room-capture" data-src="' + item.room_src + '" alt="' + item.room_name + '" >' +
                             '<div class="room-title" >' + item.room_name + '</div>' +
                             '<div class="room-info" >' +
                                 '<span class="cell cell-1" ><span class="icon"></span>' + duration(item.show_time) +'分钟</span>' +
@@ -62,10 +62,16 @@ if (data) {
     }
     $list.html(str);
 
-    // update time
-    $('#update-time').html(dateFormat(data.nowtime));
+    setTimeout(function() {
+        $('img').each(function() {
+            var $this = $(this);
+            $this.attr('src', $this.attr('data-src'));
+        });
+    }, 100);
 
     $('#need-login').hide();
+    $('#update-time').html(dateFormat(data.nowtime));
 } else {
     $('#need-login').show();
+    $('#update-time').html('');
 }
