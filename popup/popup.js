@@ -6,6 +6,13 @@ $(document).on('click', 'a', function() {
    return false;
 });
 
+$(function() {
+    $('img').each(function() {
+        var $this = $(this);
+        $this.attr('src', $this.attr('data-src'));
+    });
+});
+
 var duration = function(time) {
     var dura = (new Date() - time * 1000) / 60000;
     return dura.toFixed();
@@ -36,7 +43,7 @@ var dateFormat = function(time) {
 };
 var $list = $('#list');
 var data = chrome.extension.getBackgroundPage().getFollowingData();
-console.log(data);
+
 if (data) {
     var str = '';
     if (data.room_list.length > 0) {
@@ -61,13 +68,6 @@ if (data) {
                 '</li>';
     }
     $list.html(str);
-
-    setTimeout(function() {
-        $('img').each(function() {
-            var $this = $(this);
-            $this.attr('src', $this.attr('data-src'));
-        });
-    }, 100);
 
     $('#need-login').hide();
     $('#update-time').html(dateFormat(data.nowtime));
