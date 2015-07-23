@@ -16,7 +16,7 @@
     ],
     "background": {
         "scripts": [
-            "zepto.min.js",
+            "jquery.min.js",
             "background.js"
         ]
     },
@@ -24,7 +24,7 @@
         "all_frames": true,
         "matches": ["http://www.douyutv.com/member/cp/get_follow_list"],
         "js": [
-            "zepto.min.js",
+            "jquery.min.js",
             "content_script.js"
         ]
     }],
