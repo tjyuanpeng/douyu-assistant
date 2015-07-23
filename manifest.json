@@ -1,12 +1,12 @@
 {
     "manifest_version": 2,
-    "name": "douyu host online notice",
-    "description": "douyu host online notice",
+    "name": "douyu assistant",
+    "description": "list your following douyu hosts on chrome",
     "version": "1.0.0",
     "icons": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
     },
     "permissions": [
         "tabs",
@@ -16,22 +16,22 @@
     ],
     "background": {
         "scripts": [
-            "jquery.min.js",
-            "background.js"
+            "lib/jquery.min.js",
+            "background/background.js"
         ]
     },
     "content_scripts":[{
         "all_frames": true,
         "matches": ["http://www.douyutv.com/member/cp/get_follow_list"],
         "js": [
-            "jquery.min.js",
-            "content_script.js"
+            "lib/jquery.min.js",
+            "content/content_script.js"
         ]
     }],
-    "options_page": "options.html",
+    "options_page": "options/options.html",
     "browser_action": {
-        "default_icon": "icon.png",
+        "default_icon": "img/icon.png",
         "default_title": "douyu host online notice",
-        "default_popup": "popup.html"
+        "default_popup": "popup/popup.html"
     }
 }

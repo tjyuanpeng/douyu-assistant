@@ -36,7 +36,7 @@ var dateFormat = function(time) {
 };
 var $list = $('#list');
 var data = chrome.extension.getBackgroundPage().getFollowingData();
-
+console.log(data);
 if (data) {
     var str = '';
     if (data.room_list.length > 0) {
