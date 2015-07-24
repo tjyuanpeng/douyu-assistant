@@ -1,3 +1,5 @@
+localStorage.setItem('app-version', '1.0.0');
+
 var DATA;
 var NOTIFICATION_ID = 'douyu-following-online-notification';
 var container = $('<div></div>').appendTo('body');
@@ -43,4 +45,13 @@ function getFollowingData() {
 
 chrome.runtime.onInstalled.addListener(function(details){
     console.log('onInstalled.');
+
+    analyzer.send({
+        event: 'douyu-assistant-installed',
+        attr: {
+            testdata: '123',
+        },
+        duration: 0
+    }, function(result, error) {
+    });
 });

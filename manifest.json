@@ -17,6 +17,7 @@
     "background": {
         "scripts": [
             "lib/jquery.min.js",
+            "lib/analyzer.js",
             "background/background.js"
         ]
     },
