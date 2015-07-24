@@ -6,13 +6,6 @@ $(document).on('click', 'a', function() {
    return false;
 });
 
-$(function() {
-    $('img').each(function() {
-        var $this = $(this);
-        $this.attr('src', $this.attr('data-src'));
-    });
-});
-
 var duration = function(time) {
     var dura = (new Date() - time * 1000) / 60000;
     return dura.toFixed();
@@ -75,3 +68,12 @@ if (data) {
     $('#need-login').show();
     $('#update-time').html('');
 }
+
+$(function() {
+    setTimeout(function() {
+        $('img').each(function() {
+            var $this = $(this);
+            $this.attr('src', $this.attr('data-src'));
+        });
+    }, 100);
+});
