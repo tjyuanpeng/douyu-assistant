@@ -69,11 +69,9 @@ if (data) {
     $('#update-time').html('');
 }
 
-$(function() {
-    setTimeout(function() {
-        $('img').each(function() {
-            var $this = $(this);
-            $this.attr('src', $this.attr('data-src'));
-        });
-    }, 100);
-});
+setTimeout(function() {
+    $('img').each(function() {
+        var $this = $(this);
+        $this.attr('src', $this.attr('data-src'));
+    });
+}, 100);

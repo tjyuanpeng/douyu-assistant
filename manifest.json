@@ -24,14 +24,13 @@
         "all_frames": true,
         "matches": ["http://www.douyutv.com/member/cp/get_follow_list"],
         "js": [
-            "lib/jquery.min.js",
             "content/content_script.js"
         ]
     }],
-    "options_page": "options/options.html",
     "browser_action": {
         "default_icon": "img/icon.png",
         "default_title": "douyu assistant",
         "default_popup": "popup/popup.html"
-    }
+    },
+    "options_page": "options/options.html"
 }

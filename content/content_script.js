@@ -1,4 +1,4 @@
 chrome.runtime.sendMessage({
     type: "douyu-following-update-event",
-    origin: $('body').html()
+    origin: document.getElementsByTagName('body')[0].innerHTML
 });

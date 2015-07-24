@@ -8,6 +8,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendRequest) {
     if(request.type !== 'douyu-following-update-event') {
         return;
     }
+
     var data;
     try {
         data = JSON.parse(request.origin);
@@ -19,6 +20,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendRequest) {
         });
     }
     DATA = data;
+
     // set badge
     if (data) {
         chrome.browserAction.setBadgeText({
@@ -38,3 +40,7 @@ run();
 function getFollowingData() {
     return DATA;
 }
+
+chrome.runtime.onInstalled.addListener(function(details){
+    console.log('onInstalled.');
+});
