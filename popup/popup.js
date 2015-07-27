@@ -28,7 +28,7 @@ var dateFormat = function(time) {
     time = time * 1000;
     var date = new Date(time);
     return date.getFullYear() + '-' +
-           zerofill(date.getMonth()) + '-' +
+           zerofill(date.getMonth() + 1) + '-' +
            zerofill(date.getDate()) + '&nbsp;&nbsp;' +
            zerofill(date.getHours()) + ':' +
            zerofill(date.getMinutes()) + ':' +
